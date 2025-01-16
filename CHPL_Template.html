@@ -7,110 +7,151 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="formContainer">
-        <header>
-            <h1>CHPL</h1>
-            <div class="logo">
-                <img src="logo-placeholder.png" alt="LB&B Consultores Associados">
-            </div>
-        </header>
-        <div class="content">
-
-            <div class="content-block">
-                <label>Número do CHPL</label>
-                <p></p>
-            </div>
-
-            <div class="content-block">
-                <label>Rotina a ser Criada</label>
-                <p></p>
-            </div>
-
-            <div class="content-block">
-                <label>Descrição da Demanda do Cliente</label>
-                <p></p>
-            </div>
-
-            <div class="content-block">
-                <label>Motivo pelo qual o projeto será executado</label>
-                <p></p>
-            </div>
-
-            <div class="content-block">
-                <label>Solicitante</label>
-                <p></p>
-            </div>
-
-            <div class="content-block">
-                <label>Aprovador</label>
-                <p></p>
-            </div>
-
-            <div class="content-block">
-                <label>Responsável de Provas</label>
-                <p></p>
-            </div>
-
-            <div class="content-block">
-                <label>Responsável pela Execução da Mudança do Sistema</label>
-                <p></p>
-            </div>
-
-            <div class="content-block">
-                <label>Criação Solicitada</label>
-                <p></p>
-            </div>
-
-            <div class="content-block">
-                <label>Departamentos Afetados</label>
-                <p></p>
-            </div>
-
-            <div class="content-block">
-                <label>Prazo de Finalização (em dias úteis após a aprovação do CHPL)</label>
-                <p></p>
-            </div>
-
-            <div class="content-block">
-                <label>Aprovação Projeto</label>
-                <p></p>
-            </div>
-
-            <div class="content-block">
-                <label>Data da Aprovação do Projeto</label>
-                <p></p>
-            </div>
-
-            <div class="content-block">
-                <label>Aprovação dos Testes</label>
-                <p></p>
-            </div>
-
-            <div class="content-block">
-            <label>Data da Aprovação dos Testes</label>
-                <p></p>
-                </div>
-
-            <div class="content-block">
-                <label>Aceite Final</label>
-                <p></p>
-            </div>
-
-            <div class="content-block">
-                <label>Aceite Controladoria</label>
-                <p></p>
-            </div>
-
-            <div class="content-block">
-                <label></label>
-                <p id="emailAnexo">ANEXAR EMAIL APROVANDO</p>
-            </div>
+    <div class="header">
         
+        <div class="logo">
+            <img src="assets/Logo.png" alt="LB&B Consultores Associados" />
         </div>
-        <footer>
-            <p id="footerTxt">LB&B Consultores Associados | Avenida Presidente Juscelino Kubitschek | nº 900 | 8º andar | sala 4 | Francisco Bernardino Juiz de Fora | MG | 36081-000 | WWW.LBEB.COM.BR</p>
-        </footer> 
+        <div class="headerTxt">
+            <h1>CHPL</h1>
+        </div>
     </div>
+
+
+    <div class="footer">
+        <p id="footerTxt">LB&B Consultores Associados | Avenida Presidente Juscelino Kubitschek | nº 900 | 8º andar | sala 4 | Francisco Bernardino Juiz de Fora | MG | 36081-000 | WWW.LBEB.COM.BR</p>
+    </div>
+
+
+    <table class="formContainer">
+        <thead>
+            <tr>
+                <td>
+                    <div class="headerSpace">
+                        <div class="headerDesktop">
+                            <div class="logo">
+                                <img src="assets/Logo.png" alt="LB&B Consultores Associados">
+                            </div>
+                            <div class="headerTxt">
+                                <h1>CHPL</h1>
+                            </div>
+                            
+                        </div>
+                    </div>                 
+                </td>
+            </tr>    
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>
+                    <div class="consultorEData">
+                        <p id="consultor">{{consultor}}</p>
+                        <p id="data">{{data}}</p>
+                    </div>
+                    
+                    <div class="msgAviso">
+                        <p>Atenção" Não responder este e-mail. Envio por conta não monitorada!</p>
+                    </div>
+
+                    <div class="msgFixa">
+                        <p>ACOMPANHAMENTO DE ATIVIDADES</p>
+                    </div>
+                    
+                    <div class="content">
+                        <div class="content-block">
+                            <label>Rotina a ser Criada</label>
+                            <p>{{ descricao }}</p>
+                        </div>
+
+                        <div class="content-block">
+                            <label>Solicitante</label>
+                            <p>{{ solicitante }}</p>
+                        </div>
+
+                        <div class="content-block">
+                            <label>Aprovador</label>
+                            <p>{{ aprovador }}</p>
+                        </div>
+
+                        <div class="content-block">
+                            <label>Responsável de Provas</label>
+                            <p>{{ responsavelProvas }}</p>
+                        </div>
+
+                        <div class="content-block">
+                            <label>Responsável pela Execução da Mudança do Sistema</label>
+                            <p>{{ responsavelMudanca }}</p>
+                        </div>
+
+                        <div class="content-block">
+                            <label>Criação Solicitada</label>
+                            <p>{{ criacaoSolicitada }}</p>
+                        </div>
+
+                        <div class="content-block">
+                            <label>Departamentos Afetados</label>
+                            <p>{{ departamentosAfetados }}</p>
+                        </div>
+
+                        <div class="content-block">
+                            <label>Prazo de Finalização (em dias úteis após a aprovação do CHPL)</label>
+                            <p>{{ prazo }}</p>
+                        </div>
+
+                        <div class="content-block">
+                            <label>Aprovação Projeto</label>
+                            <p>{{ aprovacaoProjeto }}</p>
+                        </div>
+
+                        <div class="content-block">
+                            <label>Data da Aprovação do Projeto</label>
+                            <p>{{ dataAprovacao }}</p>
+                        </div>
+
+                        <div class="content-block">
+                            <label>Aprovação dos Testes</label>
+                            <p>{{ aprovacaoTestes }}</p>
+                        </div>
+
+                        <div class="content-block">
+                            <label>Data da Aprovação dos Testes</label>
+                            <p>{{ dataAprovacaoTestes }}</p>
+                        </div>
+
+                        <div class="content-block">
+                            <label>Aceite Final</label>
+                            <p>{{ aceiteFinal }}</p>
+                        </div>
+
+                        <div class="content-block">
+                            <label>Aceite Controladoria</label>
+                            <p>{{ AceiteControladoria }}</p>
+                        </div>
+
+                        <div class="content-block">
+                            <label>Anexar email aprovando</label>
+                            <p>{{ AnexoEmail }}</p>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+        
+        <tfoot>
+            <tr>
+                <td>
+                    <div class="footerSpace">
+                        <div class="footerDesktop">
+                            <p id="footerTxt">LB&B Consultores Associados | Avenida Presidente Juscelino Kubitschek | nº 900 | 8º andar | sala 4 | Francisco Bernardino Juiz de Fora | MG | 36081-000 | WWW.LBEB.COM.BR</p>
+                        </div>
+                    </div>
+                </td> 
+            </tr>
+
+        </tfoot>
+    
+    </table>
 
 </body>
 </html>
