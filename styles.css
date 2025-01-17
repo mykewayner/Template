@@ -44,7 +44,8 @@ h1 {
 }
 
 .logo {
-    border: 1px solid orange; /* for demo */;
+    border: 1px solid #F58634
+; /* for demo */;
     width: 30%;
     margin-right: 5px;
     margin-bottom: 5px;
@@ -59,7 +60,8 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: orange;
+    background-color: #F58634
+;
     border-radius: 10px;
     width: 70%;
     font-size: 1.5em;
@@ -81,7 +83,8 @@ h1 {
     #consultor{
         height: 20px;
         width: 80%;
-        border: 1px solid orange;
+        border: 1px solid #F58634
+;
         border-radius: 10px;
         padding: 20px;
         margin: 0;
@@ -93,7 +96,8 @@ h1 {
     #data{
         height: 20px;
         width: 20%;
-        border: 1px solid orange;
+        border: 1px solid #F58634
+;
         border-radius: 10px;
         padding: 20px;
         margin: 0;
@@ -102,31 +106,17 @@ h1 {
 
     p {
         padding: 5px;
-        border: 1px solid orange;
-    }
-}
-
-.msgAviso{
-    display: flex;
-    justify-content: space-between;
-    align-content: center;
-    width: 100%;
-    border: 1px solid orange;
-    margin-bottom: 5px;
-
-    border-radius: 10px;
-    p{
-        padding: 20px;
-        margin: 0;
+        border: 1px solid #F58634
+;
     }
 }
 
 .msgFixa{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-content: center;
     width: 100%;
-    background-color: #356384;
+    background-color: #3892c7;
     color: white;
     margin-bottom: 5px;
     border-radius: 10px;
@@ -135,12 +125,15 @@ h1 {
         padding: 20px;
         margin: 0;
     }
+
+    margin-top: 5px;
 }
 
 .content {
     display: flex;
     flex-direction: column;
-    border: 1px solid orange; /* for demo */;
+    border: 1px solid #F58634
+; /* for demo */;
     border-radius: 10px;
     padding: 20px;
     
@@ -159,7 +152,8 @@ h1 {
 }
 
 .content-block{
-    border-bottom: 1px solid orange;
+    border-bottom: 1px solid #F58634
+;
     margin-bottom: 25px;
 }
 
@@ -231,6 +225,21 @@ label {
     #footerTxt {
         background-color: white;
     }
+
+    .headerTxt{
+        -webkit-print-color-adjust: exact;
+    }
+
+    .msgFixa{
+        -webkit-print-color-adjust: exact;
+        
+    }
+
+    @page {
+        @bottom-right {
+          content: counter(page) ' of ' counter(pages);
+        }
+      }
 
 
 
