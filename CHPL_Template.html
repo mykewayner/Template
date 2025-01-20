@@ -1,154 +1,177 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CHPL Form</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="header">
-        
-        <div class="logo">
-            <img src="assets/Logo.png" alt="LB&B Consultores Associados" />
-        </div>
-        <div class="headerTxt">
-            <h1>CHPL</h1>
-        </div>
-    </div>
-
-
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <div id="footer" class="footer">
-        <p id="footerTxt">LB&B Consultores Associados | Avenida Presidente Juscelino Kubitschek | nº 900 | 8º andar | sala 4 | Francisco Bernardino Juiz de Fora | MG | 36081-000 | WWW.LBEB.COM.BR</p>
+      <p id="footerTxt">
+        LB&B Consultores Associados | Avenida Presidente Juscelino Kubitschek |
+        nº 900 | 8º andar | sala 4 | Francisco Bernardino Juiz de Fora | MG |
+        36081-000 | WWW.LBEB.COM.BR
+      </p>
     </div>
 
+    <div id="pageborder"></div>
+    <div class="header">
+      <div class="logo">
+        <img src="assets/Logo.png" alt="LB&B Consultores Associados" />
+      </div>
+      <div class="headerTxt">
+        <h1>CHPL</h1>
+      </div>
+    </div>
 
     <table class="formContainer">
-        <thead>
-            <tr>
-                <td>
-                    <div class="headerSpace">
-                        <div class="headerDesktop">
-                            <div class="logo">
-                                <img src="assets/Logo.png" alt="LB&B Consultores Associados">
-                            </div>
-                            <div class="headerTxt">
-                                <h1>CHPL</h1>
-                            </div>
-                            
-                        </div>
-                    </div>                 
-                </td>
-            </tr>    
-        </thead>
+      <thead>
+        <tr>
+          <td>
+            <div class="headerSpace">
+              <div class="headerDesktop">
+                <div class="logo">
+                  <img
+                    src="assets/Logo.png"
+                    alt="LB&B Consultores Associados"
+                  />
+                </div>
+                <div class="headerTxt">
+                  <h1>CHPL</h1>
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </thead>
 
-        <tbody>
-            <tr>
-                <td>
-                    <div class="consultorEData">
-                        <p id="consultor">{{consultor}}</p>
-                        <p id="data">{{data}}</p>
-                    </div>
-                    
+      <tbody>
+        <tr>
+          <td>
+            <div class="consultorEData">
+              <p id="consultor">{{consultor}}</p>
+              <p id="data">{{data}}</p>
+            </div>
 
-                    <div class="content">
-                        <div class="content-block">
-                            <label>Rotina a ser Criada</label>
-                            <p>{{ descricao }}</p>
-                        </div>
+            <div class="content">
+              <div class="content-block">
+                <label>Rotina a ser Criada</label>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus nisi ipsa perspiciatis quod sed enim voluptates quibusdam, iste harum laboriosam ex ea, corporis modi saepe voluptate. Tempora quod quae deserunt.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis ut enim suscipit reprehenderit natus dolore iste nesciunt nemo accusantium veniam, dolorem delectus deleniti recusandae dolores ea velit fugit sunt eaque!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam similique obcaecati unde corrupti autem libero ad consectetur maiores possimus eligendi, dolorum quo, at, quas dolore saepe eaque dicta itaque natus.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio tempore voluptate ipsa provident, harum unde nobis neque fuga vitae et! Soluta, repellendus mollitia culpa harum possimus placeat excepturi maiores pariatur?
+                </p>
+              </div>
 
-                        <div class="content-block">
-                            <label>Solicitante</label>
-                            <p>{{ solicitante }}</p>
-                        </div>
+              <div class="content-block">
+                <label>Solicitante</label>
+                <p>{{ solicitante }}</p>
+              </div>
 
-                        <div class="content-block">
-                            <label>Aprovador</label>
-                            <p>{{ aprovador }}</p>
-                        </div>
+              <div class="content-block">
+                <label>Aprovador</label>
+                <p>{{ aprovador }}</p>
+              </div>
 
-                        <div class="content-block">
-                            <label>Responsável de Provas</label>
-                            <p>{{ responsavelProvas }}</p>
-                        </div>
+              <div class="content-block">
+                <label>Responsável de Provas</label>
+                <p>{{ responsavelProvas }}</p>
+              </div>
 
-                        <div class="content-block">
-                            <label>Responsável pela Execução da Mudança do Sistema</label>
-                            <p>{{ responsavelMudanca }}</p>
-                        </div>
+              <div class="content-block">
+                <label>Responsável pela Execução da Mudança do Sistema</label>
+                <p>{{ responsavelMudanca }}</p>
+              </div>
 
-                        <div class="content-block">
-                            <label>Criação Solicitada</label>
-                            <p>{{ criacaoSolicitada }}</p>
-                        </div>
+              <div class="content-block">
+                <label>Criação Solicitada</label>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci excepturi quidem necessitatibus quasi veritatis. Error officiis soluta pariatur nulla enim. Natus totam nostrum maxime, dignissimos officia ipsam reprehenderit temporibus magnam.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus possimus quos adipisci ratione nulla ab quae ea incidunt, delectus cum pariatur ducimus sequi? Mollitia laboriosam id cupiditate voluptate dicta rerum.
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium eaque cum voluptatibus officia! Voluptate sint atque, consequatur iusto omnis vel quibusdam repellat maxime possimus soluta impedit laboriosam officia iure adipisci!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, ut officiis. Culpa earum accusantium ipsum harum laudantium error rerum quia odit optio quis, suscipit fugit, quam cumque hic nobis sit?
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem sit non totam nesciunt voluptatum maiores possimus enim fuga, amet hic deleniti facere architecto repudiandae earum ad facilis! Autem, corporis sed!
+                </p>
+              </div>
 
-                        <div class="content-block">
-                            <label>Departamentos Afetados</label>
-                            <p>{{ departamentosAfetados }}</p>
-                        </div>
+              <div class="content-block">
+                <label>Departamentos Afetados</label>
+                <p>{{ departamentosAfetados }}</p>
+              </div>
 
-                        <div class="content-block">
-                            <label>Prazo de Finalização (em dias úteis após a aprovação do CHPL)</label>
-                            <p>{{ prazo }}</p>
-                        </div>
+              <div class="content-block">
+                <label
+                  >Prazo de Finalização (em dias úteis após a aprovação do
+                  CHPL)</label
+                >
+                <p>{{ prazo }}</p>
+              </div>
 
-                        <div class="content-block">
-                            <label>Aprovação Projeto</label>
-                            <p>{{ aprovacaoProjeto }}</p>
-                        </div>
+              <div class="content-block">
+                <label>Aprovação Projeto</label>
+                <p>{{ aprovacaoProjeto }}</p>
+              </div>
 
-                        <div class="content-block">
-                            <label>Data da Aprovação do Projeto</label>
-                            <p>{{ dataAprovacao }}</p>
-                        </div>
+              <div class="content-block">
+                <label>Data da Aprovação do Projeto</label>
+                <p>{{ dataAprovacao }}</p>
+              </div>
 
-                        <div class="content-block">
-                            <label>Aprovação dos Testes</label>
-                            <p>{{ aprovacaoTestes }}</p>
-                        </div>
+              <div class="content-block">
+                <label>Aprovação dos Testes</label>
+                <p>{{ aprovacaoTestes }}</p>
+              </div>
 
-                        <div class="content-block">
-                            <label>Data da Aprovação dos Testes</label>
-                            <p>{{ dataAprovacaoTestes }}</p>
-                        </div>
+              <div class="content-block">
+                <label>Data da Aprovação dos Testes</label>
+                <p>{{ dataAprovacaoTestes }}</p>
+              </div>
 
-                        <div class="content-block">
-                            <label>Aceite Final</label>
-                            <p>{{ aceiteFinal }}</p>
-                        </div>
+              <div class="content-block">
+                <label>Aceite Final</label>
+                <p>{{ aceiteFinal }}</p>
+              </div>
 
-                        <div class="content-block">
-                            <label>Aceite Controladoria</label>
-                            <p>{{ AceiteControladoria }}</p>
-                        </div>
+              <div class="content-block">
+                <label>Aceite Controladoria</label>
+                <p>{{ AceiteControladoria }}</p>
+              </div>
 
-                        <div class="content-block">
-                            <label>Anexar email aprovando</label>
-                            <p>{{ AnexoEmail }}</p>
-                        </div>
-                    </div>
+              <div class="content-block">
+                <label>Anexar email aprovando</label>
+                <p>{{ AnexoEmail }}</p>
+              </div>
+            </div>
 
-                    <div class="msgFixa">
-                        <p>ACOMPANHAMENTO DE ATIVIDADES</p>
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-        
-        <tfoot>
-            <tr>
-                <td>
-                    <div class="footerSpace">
-                        <div class="footerDesktop">
-                            <p id="footerTxt">LB&B Consultores Associados | Avenida Presidente Juscelino Kubitschek | nº 900 | 8º andar | sala 4 | Francisco Bernardino Juiz de Fora | MG | 36081-000 | WWW.LBEB.COM.BR</p>
-                        </div>
-                    </div>
-                </td> 
-            </tr>
+            <div class="msgFixa">
+              <p>ACOMPANHAMENTO DE ATIVIDADES</p>
+            </div>
+          </td>
+        </tr>
+      </tbody>
 
-        </tfoot>
-    
+      <tfoot>
+        <tr>
+          <td>
+            <div class="footerSpace">
+              <div class="footerDesktop">
+                <p id="footerTxt">
+                  LB&B Consultores Associados | Avenida Presidente Juscelino
+                  Kubitschek | nº 900 | 8º andar | sala 4 | Francisco Bernardino
+                  Juiz de Fora | MG | 36081-000 | WWW.LBEB.COM.BR
+                </p>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tfoot>
     </table>
-
-</body>
+  </body>
+  <script>
+    const data = new Date();
+    const options = {year: "numeric",month: "numeric",day: "numeric",};
+    const dataFormatada = data.toLocaleDateString("pt-BR", options);
+    document.getElementById("data").innerHTML = dataFormatada;
+    
+  </script>
 </html>
