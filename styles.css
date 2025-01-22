@@ -5,6 +5,11 @@ body {
   background-color: #f9f9f9;
 }
 
+:root {
+  --laranja: #f58634;
+  --azul: #3892c7;
+}
+
 .formContainer {
   width: 80%;
   max-width: 800px;
@@ -20,7 +25,7 @@ body {
 
 .footer,
 .footerSpace {
-  height: 10%;
+  height: 90px;
 }
 
 .header {
@@ -28,7 +33,9 @@ body {
   justify-content: space-between;
   top: 0mm;
   width: 100%;
+  margin-bottom: 15px;
   background: white; /* for demo */
+  margin-bottom: 15px;
 }
 
 .headerDesktop {
@@ -37,14 +44,16 @@ body {
   top: 0mm;
   width: 100%;
   background: white; /* for demo */
+  margin-bottom: 15px;
 }
 
 h1 {
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 1.5em;
 }
 
 .logo {
-  border: 1px solid #f58634; /* for demo */
+  border: 1px solid var(--azul); /* for demo */
   width: 30%;
   margin-right: 5px;
   margin-bottom: 5px;
@@ -55,11 +64,23 @@ h1 {
     height: auto;
   }
 }
+
+.logoFooter {
+  border: 1px solid var(--azul); /* for demo */
+  width: 20%;
+  margin-bottom: 5px;
+  border-radius: 10px;
+
+  img {
+    width: 100%;
+
+  }
+}
 .headerTxt {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f58634;
+  background-color: var(--azul);
   border-radius: 10px;
   width: 70%;
   font-size: 1.5em;
@@ -68,49 +89,41 @@ h1 {
   color: white;
 }
 
-.consultorEData {
+#footerTxt {
   display: flex;
-  justify-content: space-between;
-  align-content: center;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--azul);
+  margin-left: 20px;
+  border-radius: 10px;
+  width: 80%;
   margin-bottom: 5px;
-
+}
+#consultorEData {
+  display: flex;
+  justify-content: space-between !important;
+  align-content: center;
   :last-child {
     text-align: center;
   }
 
-  #consultor {
-    height: 20px;
-    width: 80%;
-    border: 1px solid #f58634;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 0;
-    margin-right: 5px;
-  }
-
-  #data {
-    height: 20px;
-    width: 20%;
-    border: 1px solid #f58634;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 0;
-  }
 
   p {
+    font-family: monospace;
     padding: 5px;
-    border: 1px solid #f58634;
   }
+}
+#data {
+  width: 30%;
 }
 
 .msgFixa {
   display: flex;
   justify-content: center;
   align-content: center;
-  width: 100%;
-  background-color: #3892c7;
+  background-color: var(--laranja);
   color: white;
-  margin-bottom: 5px;
+  margin-bottom: 20px;
   border-radius: 10px;
 
   p {
@@ -124,16 +137,24 @@ h1 {
 .content {
   display: flex;
   flex-direction: column;
-  border: 1px solid #f58634;
+  border: 1px solid var(--azul);
   border-radius: 10px;
   padding: 20px;
+  margin-bottom: 20px;
+  label {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+  }
 
   :last-child {
     border: none;
   }
   p {
+    font-family: monospace;
+    font-size: 14px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     width: 100%;
-    padding: 8px;
     margin-top: 5px;
     box-sizing: border-box;
     min-height: 30px;
@@ -141,7 +162,7 @@ h1 {
 }
 
 .content-block {
-  border-bottom: 1px solid #f58634;
+  border-bottom: 1px solid var(--azul);
   margin-bottom: 25px;
   page-break-inside: avoid;
 }
@@ -163,6 +184,7 @@ label {
 
 .footerDesktop {
   display: flex;
+  justify-content: center;
   text-align: center;
   bottom: 0;
   width: 100%;
@@ -173,13 +195,34 @@ label {
   }
 }
 
-#emailAnexo {
+#grupoRubrica {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 10px;
-  background-color: lightgrey;
-  font-weight: bold;
+  justify-content: space-between;
+  align-items: stretch; /* Estica os elementos para a mesma altura */
+}
+
+#rubrica {
+  width: 10%;
+  border: 1px solid var(--azul);
+  border-radius: 10px;
+  position: relative; /* Permite posicionamento relativo para o conteúdo interno */
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+#rubrica p {
+  position: absolute;
+  bottom: 10px; /* Margem inferior ajustada para dentro da caixa */
+  left: 26px;  /* Margem esquerda ajustada para dentro da caixa */
+  transform: rotate(270deg); /* Rotação adequada */
+  margin: 0;
+  transform-origin: bottom left; /* Ponto de rotação ajustado */
+}
+
+#conteudoGrupoRubrica {
+  width: 90%;
+  margin-right: 20px;
 }
 
 /* Estilos para impressão */
@@ -202,11 +245,19 @@ label {
   }
  
    .footer {
+    justify-content: center;
     position: fixed;
     bottom: 0 !important;
-    height: auto !important;
+
     text-align: center;
-    margin-top: 5px;
+    margin-top: 20px;
+  } 
+
+  #footerTxt p{
+    z-index: 100000 !important;
+    visibility: show;
+    color: black !important;
+
   } 
 
   .footerDesktop {
@@ -228,13 +279,12 @@ label {
   .header,
   .headerSpace {
     background-color: white;
-    margin-bottom: 10px;
+    margin-bottom: 40px;
     z-index: 1000;
   }
 
   .footer,
   .footerSpace {
-    background-color: white;
     margin-top: 20px;
     z-index: 1000;
   }
@@ -267,20 +317,16 @@ label {
     position: fixed;
     left: 13px;
     right: 12px;
-    top: 122px;
-    bottom: 80px;
-    border: 1px solid #f58634;
+    top: 140px;
+    bottom: 120px;
+    border: 1px solid var(--azul);
     border-radius: 10px;
     z-index: 1;
   }
 
-  .consultorEData{
-    margin-left: 3px;
-    margin-right: 3px;
-  }
   .msgFixa{
-    margin-left: 3px;
-    width: 99%;
+    margin-left: 20px;
+    margin-right: 20px;
   }
     .content{
        border: none;

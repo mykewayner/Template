@@ -7,13 +7,20 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div id="footer" class="footer">
-      <p id="footerTxt">
-        LB&B Consultores Associados | Avenida Presidente Juscelino Kubitschek |
-        nº 900 | 8º andar | sala 4 | Francisco Bernardino Juiz de Fora | MG |
-        36081-000 | WWW LBEB COM BR
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, qui in dolore amet unde distinctio illum consectetur officiis perferendis sunt. Atque placeat aliquid temporibus animi vero unde magni natus illum.
+    <div class="footer">              
+      <div class="logoFooter">
+      <img
+        src="assets/Logo.png"
+        alt="LB&B Consultores Associados"
+        />
+      </div>
+      <div id="footerTxt">
+      <p >LBeB | LBEB.COM.BR <br/>
+        Avenida Presidente Juscelino Kubitschek | nº 900 | 8º andar | sala 4 <br/>
+        Francisco Bernardino | Juiz de Fora | MG | 36081-000 
+        
       </p>
+    </div>
     </div>
 
     <div id="pageborder"></div>
@@ -22,7 +29,7 @@
         <img src="assets/Logo.png" alt="LB&B Consultores Associados" />
       </div>
       <div class="headerTxt">
-        <h1>CHPL</h1>
+        <h1>CHPL 000000</h1>
       </div>
     </div>
 
@@ -39,7 +46,7 @@
                   />
                 </div>
                 <div class="headerTxt">
-                  <h1>CHPL</h1>
+                  <h1>CHPL 000000</h1>
                 </div>
               </div>
             </div>
@@ -50,12 +57,12 @@
       <tbody>
         <tr>
           <td>
-            <div class="consultorEData">
-              <p id="consultor">{{consultor}}</p>
-              <p id="data">{{data}}</p>
-            </div>
 
             <div class="content">
+              <div id="consultorEData" class="content-block">
+                <p id="consultor">{{consultor}}</p>
+                <p id="data">{{data}}</p>
+              </div>
               <div class="content-block">
                 <label>Rotina a ser Criada</label>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus nisi ipsa perspiciatis quod sed enim voluptates quibusdam, iste harum laboriosam ex ea, corporis modi saepe voluptate. Tempora quod quae deserunt.
@@ -123,25 +130,41 @@
                 <p>{{ aprovacaoTestes }}</p>
               </div>
 
+              <div id="grupoRubrica">
+                <div id="conteudoGrupoRubrica">
               <div class="content-block">
                 <label>Data da Aprovação dos Testes</label>
                 <p>{{ dataAprovacaoTestes }}</p>
               </div>
 
-              <div class="content-block">
-                <label>Aceite Final</label>
-                <p>{{ aceiteFinal }}</p>
-              </div>
 
-              <div class="content-block">
-                <label>Aceite Controladoria</label>
-                <p>{{ AceiteControladoria }}</p>
-              </div>
+            
+            
 
-              <div class="content-block">
-                <label>Anexar email aprovando</label>
-                <p>{{ AnexoEmail }}</p>
+                <div class="content-block">
+                  <label>Aceite Final</label>
+                  <p>{{ aceiteFinal }}</p>
+                </div>
+
+                <div class="content-block">
+                  <label>Aceite Controladoria</label>
+                  <p>{{ AceiteControladoria }}</p>
+                </div>
+
+                <div class="content-block">
+                  <label>Anexar email aprovando</label>
+                  <p>{{ AnexoEmail }}</p>
+                </div>
               </div>
+              <div id="rubrica">
+                <p>Rubrica</p>
+              </div>   
+            </div>
+            
+            
+            
+            
+            
             </div>
 
             <div class="msgFixa">
@@ -155,12 +178,20 @@
         <tr>
           <td>
             <div class="footerSpace">
-              <div class="footerDesktop">
-                <p id="footerTxt">
-                  LB&B Consultores Associados | Avenida Presidente Juscelino
-                  Kubitschek | nº 900 | 8º andar | sala 4 | Francisco Bernardino
-                  Juiz de Fora | MG | 36081-000 | WWW.LBEB.COM.BR Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia nam corporis ea, voluptatum maxime necessitatibus voluptate labore magni minus doloribus rem similique accusantium eveniet assumenda esse maiores iste tenetur quisquam?
+              <div class="footerDesktop">              
+                <div class="logoFooter">
+                <img
+                  src="assets/Logo.png"
+                  alt="LB&B Consultores Associados"
+                  />
+                </div>
+                <div id="footerTxt">
+                <p >LBeB | LBEB.COM.BR <br/>
+                  Avenida Presidente Juscelino Kubitschek | nº 900 | 8º andar | sala 4 <br/>
+                  Francisco Bernardino | Juiz de Fora | MG | 36081-000 
+                  
                 </p>
+              </div>
               </div>
             </div>
           </td>
