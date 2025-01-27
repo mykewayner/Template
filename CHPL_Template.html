@@ -59,10 +59,15 @@
           <td>
 
             <div class="content">
+
+              <div id="grupoRubrica">
+                <div id="conteudoGrupoRubrica">
               <div id="consultorEData" class="content-block">
                 <p id="consultor">{{consultor}}</p>
                 <p id="data">{{data}}</p>
               </div>
+
+              
               <div class="content-block">
                 <label>Rotina a ser Criada</label>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus nisi ipsa perspiciatis quod sed enim voluptates quibusdam, iste harum laboriosam ex ea, corporis modi saepe voluptate. Tempora quod quae deserunt.
@@ -71,26 +76,34 @@
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio tempore voluptate ipsa provident, harum unde nobis neque fuga vitae et! Soluta, repellendus mollitia culpa harum possimus placeat excepturi maiores pariatur?
                 </p>
               </div>
+              
 
               <div class="content-block">
                 <label>Solicitante</label>
                 <p>{{ solicitante }}</p>
               </div>
 
+              
+
               <div class="content-block">
                 <label>Aprovador</label>
                 <p>{{ aprovador }}</p>
               </div>
+              
 
               <div class="content-block">
                 <label>Responsável de Provas</label>
                 <p>{{ responsavelProvas }}</p>
               </div>
 
+              
+
               <div class="content-block">
                 <label>Responsável pela Execução da Mudança do Sistema</label>
                 <p>{{ responsavelMudanca }}</p>
               </div>
+
+              
 
               <div class="content-block">
                 <label>Criação Solicitada</label>
@@ -102,10 +115,14 @@
                 </p>
               </div>
 
+              
+
               <div class="content-block">
                 <label>Departamentos Afetados</label>
                 <p>{{ departamentosAfetados }}</p>
               </div>
+
+              
 
               <div class="content-block">
                 <label
@@ -115,23 +132,27 @@
                 <p>{{ prazo }}</p>
               </div>
 
+              
+
               <div class="content-block">
                 <label>Aprovação Projeto</label>
                 <p>{{ aprovacaoProjeto }}</p>
               </div>
+
+              
 
               <div class="content-block">
                 <label>Data da Aprovação do Projeto</label>
                 <p>{{ dataAprovacao }}</p>
               </div>
 
+              
               <div class="content-block">
                 <label>Aprovação dos Testes</label>
                 <p>{{ aprovacaoTestes }}</p>
               </div>
 
-              <div id="grupoRubrica">
-                <div id="conteudoGrupoRubrica">
+
               <div class="content-block">
                 <label>Data da Aprovação dos Testes</label>
                 <p>{{ dataAprovacaoTestes }}</p>
@@ -155,21 +176,33 @@
                   <label>Anexar email aprovando</label>
                   <p>{{ AnexoEmail }}</p>
                 </div>
+
+                <div class="msgFixa">
+                  <p>ACOMPANHAMENTO DE ATIVIDADES</p>
+                </div>
               </div>
               <div id="rubrica">
                 <p>Rubrica</p>
               </div>   
-            </div>
+            
+            
+            
+            
+            
             
             
             
             
             
             </div>
+            
+            
+            
+            
+            
+          </div>
 
-            <div class="msgFixa">
-              <p>ACOMPANHAMENTO DE ATIVIDADES</p>
-            </div>
+
           </td>
         </tr>
       </tbody>
@@ -204,6 +237,7 @@
     const options = {year: "numeric",month: "numeric",day: "numeric",};
     const dataFormatada = data.toLocaleDateString("pt-BR", options);
     document.getElementById("data").innerHTML = dataFormatada;
+    
     
   </script>
 </html>
