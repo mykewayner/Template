@@ -330,7 +330,7 @@ label {
   #pageborder {
     position: fixed;
     left: 13px;
-    right: 12px;
+    right: 80px;
     top: 140px;
     bottom: 120px;
     border: 1px solid var(--azul);
@@ -354,10 +354,10 @@ label {
 @media print {
   #rubrica {
     position: fixed;
-    top: 160px;
-    right: 30px;
-    width: 50px; /* Largura desejada para a rubrica */
-    height: 70%; /* Para ocupar toda a altura da página */
+    top: 140px;
+    right: 10px;
+    width: 55px; /* Largura desejada para a rubrica */
+    height: 75%; /* Para ocupar toda a altura da página */
     border: 1px solid var(--azul); /* Borda visível */
     display: flex;
     justify-content: flex-start;
