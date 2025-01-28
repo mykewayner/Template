@@ -9,18 +9,19 @@
   <body>
     <div class="footer">              
       <div class="logoFooter">
-      <img
-        src="assets/Logo.png"
-        alt="LB&B Consultores Associados"
-        />
+        <img
+          src="assets/Logo.png"
+          alt="LB&B Consultores Associados"
+          />
       </div>
       <div id="footerTxt">
-      <p >LBeB | LBEB.COM.BR <br/>
-        Avenida Presidente Juscelino Kubitschek | nº 900 | 8º andar | sala 4 <br/>
-        Francisco Bernardino | Juiz de Fora | MG | 36081-000 
-        
-      </p>
-    </div>
+        <p>LBeB | LBEB.COM.BR <br/>
+          Avenida Presidente Juscelino Kubitschek | nº 900 | 8º andar | sala 4 <br/>
+          Francisco Bernardino | Juiz de Fora | MG | 36081-000 
+          
+        </p>
+      </div>
+      <div class="pageCounter"></div>
     </div>
 
     <div id="pageborder"></div>
@@ -237,6 +238,8 @@
     const options = {year: "numeric",month: "numeric",day: "numeric",};
     const dataFormatada = data.toLocaleDateString("pt-BR", options);
     document.getElementById("data").innerHTML = dataFormatada;
+
+    
     
     
   </script>

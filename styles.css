@@ -95,6 +95,7 @@ h1 {
   align-items: center;
   border: 1px solid var(--azul);
   margin-left: 20px;
+  margin-right: 20px;
   border-radius: 10px;
   width: 80%;
   margin-bottom: 5px;
@@ -226,6 +227,13 @@ label {
   margin-right: 20px;
 }
 
+.pageCounter{
+  border: 1px solid var(--azul);
+  width: 20%;
+  margin-bottom: 5px;
+  border-radius: 10px;
+}
+
 /* Estilos para impressão */
 
 @media print {
@@ -242,9 +250,11 @@ label {
     display: flex;
     z-index: 10000;
 
-    p{
-      z-index: 10000;
+    p {
+      -webkit-print-color-adjust: exact;
+      font-size: 0.8em;
     }
+
   }
  
    .footer {
@@ -255,12 +265,6 @@ label {
     margin-top: 20px;
   } 
 
-  #footerTxt p{
-    z-index: 100000 !important;
-    visibility: show;
-    color: black !important;
-
-  } 
 
   .footerDesktop {
     visibility: hidden;
@@ -292,7 +296,12 @@ label {
   }
 
   #footerTxt {
+    width: 60%;
     background-color: white;
+    p {
+      color: black !important;
+      -webkit-print-color-adjust: exact;
+    }
   }
 
   .headerTxt {
@@ -310,6 +319,9 @@ label {
     
     @bottom-right {
       content: counter(page) " de " counter(pages);
+      z-index: 100000000000000000;
+      margin-right: 45px;
+      
     }
     
   }
