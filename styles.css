@@ -5,6 +5,15 @@ body {
   background-color: #f9f9f9;
 }
 
+td{
+  padding: 0;
+}
+
+.wrapper {
+  display: flex;
+  margin-bottom: 10px;
+}
+
 :root {
   --laranja: #f58634;
   --azul: #3892c7;
@@ -91,7 +100,7 @@ h1 {
   justify-content: center;
   align-items: center;
   border: 1px solid var(--azul);
-  margin-left: 20px;
+  margin-left: 10px;
   border-radius: 10px;
   width: 80%;
 }
@@ -122,8 +131,8 @@ h1 {
   flex-direction: column;
   border: 1px solid var(--azul);
   border-radius: 10px;
+  width: 90%;
   padding: 20px;
-  margin-bottom: 20px;
   label {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
@@ -185,6 +194,7 @@ label {
 }
 
 #rubrica {
+  margin-left: 10px;
   width: 10%;
   border: 1px solid var(--azul);
   border-radius: 10px;
@@ -228,20 +238,21 @@ label {
 }
 
 .pageCounter{
-  display: flex;
   border: 1px solid var(--azul);
   width: 20%;
-  text-align: center;
-  justify-content: center;
   align-content: center;
   border-radius: 10px;
-  margin-left: 20px;
-  margin-right: 10px;
+  margin-left: 10px;
 }
+
 
 /* Estilos para impressão */
 
+
 @media print {
+  @page {
+    size: A4;
+  }
   body {
     margin: 0;
     padding: 0;
@@ -249,6 +260,9 @@ label {
   }
   
 
+  .content {
+    width: 84%;
+    }
 
 
    .footer {    
@@ -260,6 +274,9 @@ label {
       font-size: 0.8em;
     }
 
+  }
+  .pageCounter{
+    margin-right: 10px;
   }
  
    .footer {
@@ -325,12 +342,10 @@ label {
 
   .pageCounter::after {
     content: counter(page) " de " counter(pages); /* Apenas o número da página atual */
-    display: flex;
     align-content: center;
     font-size: 14px;
     text-align: center;
     margin-top: 10px;
-    font-weight: bold;
     
   }
   
@@ -345,13 +360,35 @@ label {
     
   }
 
+  #rubrica {
+    position: fixed;
+    top: 125px;
+    right: 10px;
+    width: 55px; /* Largura desejada para a rubrica */
+    height: 820px; /* Para ocupar toda a altura da página */
+    border: 1px solid var(--azul); /* Borda visível */
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    z-index: 1000; /* Garante que fique acima do conteúdo */
+  }
+
+  #rubrica p {
+    bottom: 70px;
+    left: 25px;
+    writing-mode: vertical-rl; /* Mantém o texto na orientação vertical */
+    text-align: center;
+    transform: rotate(180deg); /* Corrige a rotação para leitura */
+    margin: 0;
+  }
+
 
   #pageborder {
     position: fixed;
     left: 13px;
     right: 80px;
-    top: 130px;
-    bottom: 120px;
+    top: 125px;
+    bottom: 100px;
     border: 1px solid var(--azul);
     border-radius: 10px;
     z-index: 1;
@@ -367,29 +404,4 @@ label {
     display: table-footer-group;
   }
 
-}
-
-
-@media print {
-  #rubrica {
-    position: fixed;
-    top: 130px;
-    right: 10px;
-    width: 55px; /* Largura desejada para a rubrica */
-    height: 76%; /* Para ocupar toda a altura da página */
-    border: 1px solid var(--azul); /* Borda visível */
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
-    z-index: 1000; /* Garante que fique acima do conteúdo */
-  }
-
-  #rubrica p {
-    bottom: 70px;
-    left: 55px;
-    writing-mode: vertical-rl; /* Mantém o texto na orientação vertical */
-    text-align: center;
-    transform: rotate(180deg); /* Corrige a rotação para leitura */
-    margin: 0;
-  }
 }
