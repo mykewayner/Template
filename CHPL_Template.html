@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CHPL Form</title>
     <link rel="stylesheet" href="styles.css" />
+    
   </head>
   <body>
     <div class="footer">              
@@ -104,7 +105,6 @@
               </div>
 
               
-
               <div class="content-block">
                 <label>Criação Solicitada</label>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci excepturi quidem necessitatibus quasi veritatis. Error officiis soluta pariatur nulla enim. Natus totam nostrum maxime, dignissimos officia ipsam reprehenderit temporibus magnam.
@@ -132,20 +132,16 @@
                 <p>{{ prazo }}</p>
               </div>
 
-              
-
-              <div class="content-block">
-                <label>Aprovação Projeto</label>
-                <p>{{ aprovacaoProjeto }}</p>
+              <div class="contentWrapper">
+                <div class="content-block">
+                  <label>Aprovação Projeto</label>
+                  <p>{{ aprovacaoProjeto }}</p>
+                </div>
+                <div class="content-block">
+                  <label>Data da Aprovação do Projeto</label>
+                  <p>{{ dataAprovacao }}</p>
+                </div>
               </div>
-
-              
-
-              <div class="content-block">
-                <label>Data da Aprovação do Projeto</label>
-                <p>{{ dataAprovacao }}</p>
-              </div>
-
               
               <div class="content-block">
                 <label>Aprovação dos Testes</label>
@@ -161,7 +157,7 @@
 
             
             
-
+              <div class="contentWrapper">
                 <div class="content-block">
                   <label>Aceite Final</label>
                   <p>{{ aceiteFinal }}</p>
@@ -171,6 +167,7 @@
                   <label>Aceite Controladoria</label>
                   <p>{{ AceiteControladoria }}</p>
                 </div>
+              </div>
 
                 <div class="content-block">
                   <label>Anexar email aprovando</label>
@@ -180,11 +177,18 @@
                 <div class="msgFixa">
                   <p>ACOMPANHAMENTO DE ATIVIDADES</p>
                 </div>
+
+                <div class="contadorHoras">
+                  <p>Quantidade:</p>
+                  <p>1.000,00</p>
+                  <p>Horas:</p>
+                  <p>999:999</p>
+                </div>
                 
             </div>
             
             <div id="rubrica">
-              <p>Rubrica</p>
+              <p>Rubricas</p>
             </div>
             
           </div>

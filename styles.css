@@ -14,6 +14,22 @@ td{
   margin-bottom: 10px;
 }
 
+.contentWrapper {
+  display: flex;
+
+  .content-block {
+    width: 50% !important;
+  }
+  .content-block:last-child {
+    border-bottom: 1px solid var(--azul);
+    margin-left: 10px;
+  }
+  .content-block:first-child {
+    margin-right: 10px;
+  }
+  
+}
+
 :root {
   --laranja: #f58634;
   --azul: #3892c7;
@@ -237,6 +253,26 @@ label {
   margin-top: 5px;
 }
 
+.contadorHoras{
+  display: flex;
+  justify-content: center !important;
+  align-content: center !important;
+  border: 1px solid var(--azul) !important;
+  color: black;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  
+
+  p {
+    text-align: center !important;
+    padding: 5px !important;
+    margin: 0;
+    font-weight: bold;
+  }
+
+  margin-top: 5px;
+}
+
 .pageCounter{
   border: 1px solid var(--azul);
   width: 20%;
@@ -340,22 +376,10 @@ label {
     print-color-adjust: exact;
   }
 
-  .pageCounter::after {
-    content: counter(page) " de " counter(pages); /* Apenas o número da página atual */
-    align-content: center;
-    font-size: 14px;
-    text-align: center;
-    margin-top: 10px;
-    
-  }
   
   @page {
-    
     @bottom-right {
       content: counter(page) " de " counter(pages);
-      z-index: 100000000000000000;
-      margin-right: 45px;
-      
     }
     
   }
