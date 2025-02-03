@@ -70,6 +70,7 @@ td{
   width: 100%;
   background: white; /* for demo */
   margin-bottom: 10px;
+  height: 110px;
 }
 
 h1 {
@@ -82,6 +83,9 @@ h1 {
   width: 30%;
   margin-right: 10px;
   border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   img {
     width: 100%;
@@ -93,9 +97,13 @@ h1 {
   border: 1px solid var(--azul); /* for demo */
   width: 20%;
   border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   img {
     width: 100%;
+    height: auto;
 
   }
 }
@@ -172,7 +180,6 @@ h1 {
 .content-block {
   border-bottom: 1px solid var(--azul);
   margin-bottom: 10px;
-  page-break-inside: avoid;
 }
 
 label {
@@ -197,7 +204,7 @@ label {
   bottom: 0;
   width: 100%;
   background: white; /* for demo */
-  z-index: 1000;
+  height: 80px;
   p {
     margin: 1px 0;
   }
