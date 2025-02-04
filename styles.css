@@ -59,7 +59,7 @@ td{
   top: 0mm;
   width: 100%;
   margin-bottom: 10px;
-  background: white; /* for demo */
+  background: white;
 
 }
 
@@ -68,7 +68,7 @@ td{
   justify-content: space-between;
   top: 0mm;
   width: 100%;
-  background: white; /* for demo */
+  background: white;
   margin-bottom: 10px;
   height: 110px;
 }
@@ -79,7 +79,7 @@ h1 {
 }
 
 .logo {
-  border: 1px solid var(--azul); /* for demo */
+  border: 1px solid var(--azul);
   width: 30%;
   margin-right: 10px;
   border-radius: 10px;
@@ -94,7 +94,7 @@ h1 {
 }
 
 .logoFooter {
-  border: 1px solid var(--azul); /* for demo */
+  border: 1px solid var(--azul);
   width: 20%;
   border-radius: 10px;
   display: flex;
@@ -201,9 +201,10 @@ label {
   display: flex;
   justify-content: center;
   text-align: center;
+  font-size: 0.9em;
   bottom: 0;
   width: 100%;
-  background: white; /* for demo */
+  background: white; 
   height: 80px;
   p {
     margin: 1px 0;
@@ -213,7 +214,7 @@ label {
 #grupoRubrica {
   display: flex;
   justify-content: space-between;
-  align-items: stretch; /* Estica os elementos para a mesma altura */
+  align-items: stretch;
 }
 
 #rubrica {
@@ -221,7 +222,7 @@ label {
   width: 10%;
   border: 1px solid var(--azul);
   border-radius: 10px;
-  position: relative; /* Permite posicionamento relativo para o conteúdo interno */
+  position: relative;
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
@@ -229,11 +230,11 @@ label {
 
 #rubrica p {
   position: absolute;
-  bottom: 10px; /* Margem inferior ajustada para dentro da caixa */
-  left: 26px;  /* Margem esquerda ajustada para dentro da caixa */
-  transform: rotate(270deg); /* Rotação adequada */
+  bottom: 10px; 
+  left: 26px; 
+  transform: rotate(270deg); 
   margin: 0;
-  transform-origin: bottom left; /* Ponto de rotação ajustado */
+  transform-origin: bottom left; 
 }
 
 #conteudoGrupoRubrica {
@@ -310,7 +311,7 @@ label {
 
    .footer {    
     display: flex;
-    z-index: 10000;
+    z-index: 1;
 
     p {
       -webkit-print-color-adjust: exact;
@@ -328,12 +329,13 @@ label {
     bottom: 0 !important;
     text-align: center;
     margin-top: 20px;
+    
   } 
 
 
   .footerDesktop {
     visibility: hidden;
-    z-index: -1;
+
   }
 
   .formContainer {
@@ -343,21 +345,18 @@ label {
     width: 100%;
     height: 100%;
   }
-  .consultorEData{
-    z-index: 1000;
-  }
 
   .header,
   .headerSpace {
     background-color: white;
     margin-bottom: 20px;
-    z-index: 1000;
+
   }
 
   .footer,
   .footerSpace {
     margin-top: 30px;
-    z-index: 1000;
+
   }
 
   .logoFooter{
@@ -387,6 +386,7 @@ label {
   @page {
     @bottom-right {
       content: counter(page) " de " counter(pages);
+      color: #3892c7;
     }
     
   }
@@ -395,24 +395,23 @@ label {
     position: fixed;
     top: 125px;
     right: 10px;
-    width: 55px; /* Largura desejada para a rubrica */
-    height: 820px; /* Para ocupar toda a altura da página */
-    border: 1px solid var(--azul); /* Borda visível */
+    width: 55px; 
+    height: 820px; 
+    border: 1px solid var(--azul); 
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
-    z-index: 1000; /* Garante que fique acima do conteúdo */
+
   }
 
   #rubrica p {
     bottom: 70px;
     left: 25px;
-    writing-mode: vertical-rl; /* Mantém o texto na orientação vertical */
+    writing-mode: vertical-rl; 
     text-align: center;
-    transform: rotate(180deg); /* Corrige a rotação para leitura */
+    transform: rotate(180deg);
     margin: 0;
   }
-
 
   #pageborder {
     position: fixed;
