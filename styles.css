@@ -4,19 +4,15 @@ body {
   padding: 0;
   background-color: #f9f9f9;
 }
-
 td{
   padding: 0;
 }
-
 .wrapper {
   display: flex;
   margin-bottom: 10px;
 }
-
 .contentWrapper {
   display: flex;
-
   .content-block {
     width: 50% !important;
   }
@@ -27,14 +23,11 @@ td{
   .content-block:first-child {
     margin-right: 10px;
   }
-  
 }
-
 :root {
   --laranja: #f58634;
   --azul: #3892c7;
 }
-
 .formContainer {
   width: 80%;
   max-width: 800px;
@@ -47,12 +40,10 @@ td{
 .headerSpace {
   height: 10%;
 }
-
 .footer,
 .footerSpace {
-  height: 90px;
+  height: 70px;
 }
-
 .header {
   display: none;
   justify-content: space-between;
@@ -62,7 +53,6 @@ td{
   background: white;
 
 }
-
 .headerDesktop {
   display: flex;
   justify-content: space-between;
@@ -72,12 +62,10 @@ td{
   margin-bottom: 10px;
   height: 110px;
 }
-
 h1 {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.5em;
 }
-
 .logo {
   border: 1px solid var(--azul);
   width: 30%;
@@ -92,7 +80,6 @@ h1 {
     height: auto;
   }
 }
-
 .logoFooter {
   border: 1px solid var(--azul);
   width: 20%;
@@ -102,8 +89,8 @@ h1 {
   align-items: center;
 
   img {
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 100%;
 
   }
 }
@@ -118,7 +105,6 @@ h1 {
   font-weight: bold;
   color: white;
 }
-
 #footerTxt {
   display: flex;
   justify-content: center;
@@ -136,7 +122,6 @@ h1 {
     text-align: center;
   }
 
-
   p {
     font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
@@ -147,9 +132,6 @@ h1 {
 #data {
   width: 30%;
 }
-
-
-
 .content {
   display: flex;
   flex-direction: column;
@@ -176,17 +158,14 @@ h1 {
     min-height: 30px;
   }
 }
-
 .content-block {
   border-bottom: 1px solid var(--azul);
   margin-bottom: 10px;
 }
-
 label {
   margin-top: 10px;
   font-weight: bold;
 }
-
 .footer {
   display: none;
   position: fixed;
@@ -196,7 +175,6 @@ label {
     margin: 1px 0;
   }
 }
-
 .footerDesktop {
   display: flex;
   justify-content: center;
@@ -210,13 +188,11 @@ label {
     margin: 1px 0;
   }
 }
-
 #grupoRubrica {
   display: flex;
   justify-content: space-between;
   align-items: stretch;
 }
-
 #rubrica {
   margin-left: 10px;
   width: 10%;
@@ -227,21 +203,19 @@ label {
   justify-content: flex-start;
   align-items: flex-end;
 }
-
 #rubrica p {
   position: absolute;
-  bottom: 10px; 
+  bottom: 10px;
+  color: var(--azul); 
   left: 26px; 
   transform: rotate(270deg); 
   margin: 0;
   transform-origin: bottom left; 
 }
-
 #conteudoGrupoRubrica {
   width: 90%;
   margin-right: 20px;
 }
-
 .msgFixa {
   display: flex;
   justify-content: center !important;
@@ -260,7 +234,6 @@ label {
 
   margin-top: 5px;
 }
-
 .contadorHoras{
   display: flex;
   justify-content: center !important;
@@ -281,18 +254,7 @@ label {
   margin-top: 5px;
 }
 
-.pageCounter{
-  border: 1px solid var(--azul);
-  width: 20%;
-  align-content: center;
-  border-radius: 10px;
-  margin-left: 10px;
-}
-
-
 /* Estilos para impressão */
-
-
 @media print {
   @page {
     size: A4;
@@ -302,27 +264,20 @@ label {
     padding: 0;
     background-color: white;
   }
-  
-
   .content {
     width: 84%;
     }
-
-
    .footer {    
     display: flex;
     z-index: 1;
 
     p {
       -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
       font-size: 0.8em;
     }
 
   }
-  .pageCounter{
-    margin-right: 10px;
-  }
- 
    .footer {
     justify-content: center;
     position: fixed;
@@ -331,13 +286,10 @@ label {
     margin-top: 20px;
     
   } 
-
-
   .footerDesktop {
     visibility: hidden;
 
   }
-
   .formContainer {
     box-shadow: none;
     margin: 0;
@@ -345,65 +297,59 @@ label {
     width: 100%;
     height: 100%;
   }
-
   .header,
   .headerSpace {
     background-color: white;
     margin-bottom: 20px;
 
   }
-
   .footer,
   .footerSpace {
-    margin-top: 30px;
+    margin-top: 20px;
 
   }
-
   .logoFooter{
     margin-left: 13px;
   }
-
   #footerTxt {
-    width: 60%;
+    width: 80%;
+    margin-right: 10px;
     background-color: white;
     p {
       color: black !important;
       -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
     }
   }
-
   .headerTxt {
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
-
   .msgFixa {
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
-
-  
   @page {
     @bottom-right {
       content: counter(page) " de " counter(pages);
-      color: #3892c7;
+      margin-right: 10px;
+      font-family: Arial, sans-serif;
+      font-weight: bold;
     }
     
   }
-
   #rubrica {
     position: fixed;
     top: 125px;
     right: 10px;
     width: 55px; 
-    height: 820px; 
+    height: 835px; 
     border: 1px solid var(--azul); 
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
 
   }
-
   #rubrica p {
     bottom: 70px;
     left: 25px;
@@ -412,18 +358,16 @@ label {
     transform: rotate(180deg);
     margin: 0;
   }
-
   #pageborder {
     position: fixed;
     left: 13px;
     right: 80px;
     top: 125px;
-    bottom: 100px;
+    bottom: 85px;
     border: 1px solid var(--azul);
     border-radius: 10px;
     z-index: 1;
   }
-
     .content{
        border: none;
     }
@@ -433,5 +377,4 @@ label {
   tfoot {
     display: table-footer-group;
   }
-
 }
